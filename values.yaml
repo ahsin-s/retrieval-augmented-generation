@@ -1,0 +1,16 @@
+authentication:
+  apikey:
+    enabled: true
+    allowed_keys:
+      - readonly-key
+      - secr3tk3y
+  users:
+    - readonly@example.com
+    - admin@example.com
+  anonymous_access:
+    enabled: false
+  oidc:
+    enabled: true
+    issuer: https://auth.wcs.api.weaviate.io/auth/realms/SeMI
+    username_claim: email
+    groups_claim: groups
